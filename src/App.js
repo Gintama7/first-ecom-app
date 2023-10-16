@@ -42,21 +42,24 @@ const [skinInfo,setSkinInfo] = useState([]);
     <div className="app">
       <ProductForm formHandler={formHandler}/>
       <h1>Products</h1>
+      <div className="productlist">
       <ul id="table1List"><h2>Electronic Items</h2> 
+      
   {electronicsInfo.map((item)=>(
-    <li key={item.id}>{item.product} - {item.category} - {item.price} <button onClick={(e)=>deleteHandler(e,item.id)}>Delete</button></li>
+    <li key={item.id}>{item.product} - {item.category} - {item.price} <button className='delBtn' onClick={(e)=>deleteHandler(e,item.id)}>Delete</button></li>
   ))}
    </ul>
    <ul id="table2List"><h2>Food Items</h2> 
   {foodInfo.map((item)=>(
-    <li key={item.id}>{item.product} - {item.category} - {item.price} <button onClick={(e)=>deleteHandler(e,item.id)}>Delete</button></li>
+    <li key={item.id}>{item.product} - {item.category} - {item.price} <button className='delBtn' onClick={(e)=>deleteHandler(e,item.id)}>Delete</button></li>
   ))}
    </ul>
    <ul id="table3List"><h2>Skincare Items</h2> 
   {skinInfo.map((item)=>(
-    <li key={item.id}>{item.product} - {item.category} - {item.price} <button onClick={(e)=>deleteHandler(e,item.id)}>Delete</button></li>
+    <li key={item.id}>{item.product} - {item.category} - {item.price} <button className='delBtn' onClick={(e)=>deleteHandler(e,item.id)}>Delete</button></li>
   ))}
    </ul>
+   </div>
     </div>
   );
 }

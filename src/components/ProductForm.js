@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './ProductForm.css';
 
 const ProductForm = (props) => {
     const [idInput,setIdInput] = useState('');
